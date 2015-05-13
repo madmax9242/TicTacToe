@@ -13,10 +13,11 @@ $(document).ready(function() {
 			}
 
 			else {
-				//I add the class to the table cell
+				//I add the class to the table cell so I can use it to compare in the checkWinner function
 				$(this).html(xIcon);
 				$(this).addClass('xClass'); 
 				turnCounter++;
+				checkWinner();
 			}
 		}
 
@@ -30,22 +31,29 @@ $(document).ready(function() {
 				$(this).html(oIcon);
 				$(this).addClass('oClass');
 				turnCounter++;
+				checkWinner();
 			}
 		}
 
-		checkWinner();
+		//checkWinner();
 	})
 
 	function checkWinner()  {
-		console.log($('#alpha').hasClass('oClass'));
-		if (($('#alpha').hasClass('oClass') == $('#bravo').hasClass('oClass')) && ($('#bravo').hasClass('oClass') == $('#charlie').hasClass('oClass')))  {
-			console.log($('#bravo').hasClass('oClass'));
-			console.log($('#charlie').hasClass('oClass'));
+		var tester = ['oClass','xClass'];
+		for (var i = 0; i > tester.length; i++)  {
+
+
+			if ($('#alpha').hasClass(tester[i]) == true && $('#bravo').hasClass(tester[i]) == true && ($('#charlie').hasClass(tester[i]) == true))  {
+				console.log("Row 1 wins");
+			}
+			else if ($('#delta').hasClass('oClass') == true && $('#epsilon').hasClass('oClass') == true && ($('#foxtrot').hasClass('oClass') == true)) {
+				console.log("Row 2 wins")
+			}
+			else if ($('#golf').hasClass('oClass') == true && $('#hotel').hasClass('oClass') == true && ($('#indigo').hasClass('oClass') == true)) {
+				console.log("Row 3 wins")
+			}
 		}
-		else {
-			console.log("Boo");
-		}
-		}
+	}
 	
 
 });

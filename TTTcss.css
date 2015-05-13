@@ -1,35 +1,49 @@
 
 #alphaBlock  {
-	box-shadow:inset -10px 0 6px -10px black;
+
 }
 
 #bravoBlock  {
-	box-shadow:inset -4px 0 6px -4px black;
+
 
 }
 #deltaBlock  {
-	box-shadow:inset -10px 0 6px -10px black;
+
 }
 
  #epsilonBlock  {
  	/*box-shadow: inset 0 10px 6px -10px black;*/
  }
  #foxtrotBlock  {
- 	box-shadow: inset 0 10px 6px -10px black;
+
+ }
+ #gameBoard  {
+
  }
  #guerrillaBlock  {
  	color: white;
- 	box-shadow:inset -20px 0 6px -20px black;
- 	box-shadow: inset 0 20px 6px -20px black;
+ 	margin-right: 2px;
+ 	background-color: red;
  }
 
  #hotelBlock  {
  	color: white;
- 	box-shadow: inset -10px 0 6px -10px black;
- 	box-shadow: inset 0 10px 6px -10px black;
+ 	/*margin-right: 1px;
+ 	margin-left: 1px;*/
  }
 #indigoBlock  {
-	box-shadow: inset 0 10px 6px -10px black;
+	color: red;
+	background-color: black;
+	padding: 10px;
+	
+}
+.middleRow  {
+ 	padding-bottom: 3px;
+ 	padding-top: 3px;
+}
+.middleColumn  {
+ 	padding-left: 3px;
+ 	padding-right: 3px;
 }
 
 
@@ -39,16 +53,13 @@
 }
 .boardSquares  {
 	background-color: white;
-	/*border: 2px solid black;*/
-	/*box-sizing:border-box;	*/
 }
 .gameRows  {
 	width: 80%;
 	margin: 0 auto;
+	background-color: blue;
 }
-.left-right-shadow  {
-	box-shadow: 2px 0 2px -2px black, -10px 0 10px -10px black;
-}
+
 .winCounter  {
 	height: 20%;
 	text-align: center;

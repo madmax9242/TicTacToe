@@ -1,9 +1,46 @@
-.blankSpace  {
-	height: 10%;
-	text-align: center;
-	color: white;
+#bravoBlock  {
+	border-right-color: white;
+	border-left-color: white;
+	box-shadow:inset -2px 0 2px -2px black;
+
+}
+#deltaBlock  {
+	border-bottom-color: white;
+	border-top-color: white;
 }
 
+ #epsilonBlock  {
+ 	box-shadow:inset 0px 0px 0px 2px black;
+ }
+ #foxtrotBlock  {
+ 	border-bottom-color: white;
+ 	border-top-color: white;
+ }
+ #guerrillaBlock  {
+ 	box-shadow:inset -2px 0 2px -2px black;
+ 	color: white;
+ }
+
+ #hotelBlock  {
+ 	color: white;
+ 	
+ 	box-shadow:inset -2px 0 2px -2px black; 
+ }
+
+
+
+.blankSpace  {
+ 	color: white;
+ 	background-color: white;
+}
+.boardSquares  {
+	background-color: white;
+
+	
+}
+.left-right-shadow  {
+	box-shadow: 2px 0 2px -2px black, -2px 0 2px -2px black;
+}
 .winCounter  {
 	height: 20%;
 	text-align: center;

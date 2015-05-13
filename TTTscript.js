@@ -13,7 +13,9 @@ $(document).ready(function() {
 			}
 
 			else {
+				//I add the class to the table cell
 				$(this).html(xIcon);
+				$(this).addClass('xClass'); 
 				turnCounter++;
 			}
 		}
@@ -26,21 +28,25 @@ $(document).ready(function() {
 
 			else {
 				$(this).html(oIcon);
+				$(this).addClass('oClass');
 				turnCounter++;
 			}
 		}
 
-		//checkWinner();
+		checkWinner();
 	})
 
-	// function checkWinner()  {
-	// 	if ($('#alpha').is('p')) {
-	// 		console.log("STuff");
-	// 	}
-	// 	else {
-	// 		console.log($('#bravo'));
-	// 	}
-	// }
+	function checkWinner()  {
+		console.log($('#alpha').hasClass('oClass'));
+		if (($('#alpha').hasClass('oClass') == $('#bravo').hasClass('oClass')) && ($('#bravo').hasClass('oClass') == $('#charlie').hasClass('oClass')))  {
+			console.log($('#bravo').hasClass('oClass'));
+			console.log($('#charlie').hasClass('oClass'));
+		}
+		else {
+			console.log("Boo");
+		}
+		}
+	
 
 });
 

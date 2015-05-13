@@ -6,8 +6,15 @@ $(document).ready(function() {
 
 	
 	$('td').click(function(event)  {
-		$(this).append(xIcon);
-		console.log(xIcon);
+		if ($(this).html() == xIcon || $('#alphaBlock').html() == oIcon) {
+			console.log($(this).val());
+
+			alert("Nope");
+		}
+		else {
+			$(this).html(xIcon);
+		}
+
 
 	})
 

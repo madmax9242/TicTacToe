@@ -1,22 +1,46 @@
 // X icon - <i class="fa fa-times fa-5x></i>"
 // O icon - <i class="fa fa-circle-o fa-5x"></i>
-var xIcon = '<i class="fa fa-times fa-5x"></i>';
-var oIcon = '<iclass="fa fa-circle-o fa-5x"></i>';
+var xIcon = '<span><i class="fa fa-times fa-5x"></i></span>';
+var oIcon = '<p><i class="fa fa-circle-o fa-5x"></i></p>';
+var turnCounter = 0;
 $(document).ready(function() {
-
 	
 	$('td').click(function(event)  {
-		if ($(this).html() == xIcon || $('#alphaBlock').html() == oIcon) {
-			console.log($(this).val());
+		if (turnCounter % 2 === 0) {
+			if ($(this).html() == xIcon || $(this).html() == oIcon) {
 
-			alert("Nope");
+				alert("Nice try, cheater.");
+			}
+
+			else {
+				$(this).html(xIcon);
+				turnCounter++;
+			}
 		}
-		else {
-			$(this).html(xIcon);
+
+		else if (turnCounter % 2 === 1) {
+			if ($(this).html() == xIcon || $(this).html() == oIcon) {
+
+				alert("Nice try, cheater.");
+			}
+
+			else {
+				$(this).html(oIcon);
+				turnCounter++;
+			}
 		}
 
-
+		//checkWinner();
 	})
 
+	// function checkWinner()  {
+	// 	if ($('#alpha').is('p')) {
+	// 		console.log("STuff");
+	// 	}
+	// 	else {
+	// 		console.log($('#bravo'));
+	// 	}
+	// }
 
 });
+

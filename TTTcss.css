@@ -1,36 +1,4 @@
-/*
-#alphaBlock  {
-
-}
-
-#bravoBlock  {
-
-
-}
-#deltaBlock  {
-
-}
-
- #epsilonBlock  {
-
- }
- #foxtrotBlock  {
-
- }
-
- #guerrillaBlock  {
- 	color: white;
- }
-
- #hotelBlock  {
- 	color: white;
- }
-#indigoBlock  {
-
-	
-}*/
-
- #gameBoard  {
+#gameBoard  {
  	margin: 0 auto;
  }
 
@@ -57,9 +25,6 @@
 	background-color: lightblue;
 }
 
-p  {
-	color:white;
-}
 
 td  {
 	min-width: 100px;

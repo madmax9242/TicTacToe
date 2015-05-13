@@ -57,7 +57,12 @@
 	background-color: lightblue;
 }
 
+p  {
+	color:white;
+}
+
 td  {
 	min-width: 100px;
 	min-height: 100px;
+	text-align: center;
 }

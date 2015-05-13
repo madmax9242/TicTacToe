@@ -40,7 +40,9 @@ $(document).ready(function() {
 
 	function checkWinner()  {
 		var tester = ['oClass','xClass'];
-		for (var i = 0; i > tester.length; i++)  {
+
+		for (var i = 0; i < tester.length; i++) {
+
 
 
 			if ($('#alpha').hasClass(tester[i]) == true && $('#bravo').hasClass(tester[i]) == true && ($('#charlie').hasClass(tester[i]) == true))  {
@@ -52,7 +54,24 @@ $(document).ready(function() {
 			else if ($('#golf').hasClass('oClass') == true && $('#hotel').hasClass('oClass') == true && ($('#indigo').hasClass('oClass') == true)) {
 				console.log("Row 3 wins")
 			}
-		}
+			else if ($('#alpha').hasClass('oClass') == true && $('#delta').hasClass('oClass') == true && ($('#golf').hasClass('oClass') == true)) {
+				console.log("Column 1 wins");
+			}
+			else if ($('#bravo').hasClass('oClass') == true && $('#epsilon').hasClass('oClass') == true && ($('#hotel').hasClass('oClass') == true)) {
+				console.log("Column 2 wins");
+			}
+			else if ($('#charlie').hasClass('oClass') == true && $('#foxtrot').hasClass('oClass') == true && ($('#indigo').hasClass('oClass') == true)) {
+				console.log("Column 2 wins");
+			}
+			else if ($('#alpha').hasClass('oClass') == true && $('#epsilon').hasClass('oClass') == true && ($('#indigo').hasClass('oClass') == true)) {
+				console.log("Diagonal 1 wins");
+			}
+			else if ($('#charlie').hasClass('oClass') == true && $('#epsilon').hasClass('oClass') == true && ($('#golf').hasClass('oClass') == true)) {
+				console.log("Diagonal 2 wins");
+			}
+
+	}
+
 	}
 	
 

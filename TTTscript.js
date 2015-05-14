@@ -1,5 +1,3 @@
-// X icon - <i class="fa fa-times fa-5x></i>"
-// O icon - <i class="fa fa-circle-o fa-5x"></i>
 var xIcon = '<span><i class="fa fa-times fa-5x"></i></span>';
 var oIcon = '<p><i class="fa fa-circle-o fa-5x"></i></p>';
 var turnCounter = 0;
@@ -34,46 +32,37 @@ $(document).ready(function() {
 				checkWinner();
 			}
 		}
-
-		//checkWinner();
 	})
 
 	function checkWinner()  {
 		var tester = ['oClass','xClass'];
 
 		for (var i = 0; i < tester.length; i++) {
-
-
-
 			if ($('#alpha').hasClass(tester[i]) == true && $('#bravo').hasClass(tester[i]) == true && ($('#charlie').hasClass(tester[i]) == true))  {
 				console.log("Row 1 wins");
 			}
-			else if ($('#delta').hasClass('oClass') == true && $('#epsilon').hasClass('oClass') == true && ($('#foxtrot').hasClass('oClass') == true)) {
+			else if ($('#delta').hasClass(tester[i]) == true && $('#epsilon').hasClass(tester[i]) == true && ($('#foxtrot').hasClass(tester[i]) == true)) {
 				console.log("Row 2 wins")
 			}
-			else if ($('#golf').hasClass('oClass') == true && $('#hotel').hasClass('oClass') == true && ($('#indigo').hasClass('oClass') == true)) {
+			else if ($('#golf').hasClass(tester[i]) == true && $('#hotel').hasClass(tester[i]) == true && ($('#indigo').hasClass(tester[i]) == true)) {
 				console.log("Row 3 wins")
 			}
-			else if ($('#alpha').hasClass('oClass') == true && $('#delta').hasClass('oClass') == true && ($('#golf').hasClass('oClass') == true)) {
+			else if ($('#alpha').hasClass(tester[i]) == true && $('#delta').hasClass(tester[i]) == true && ($('#golf').hasClass(tester[i]) == true)) {
 				console.log("Column 1 wins");
 			}
-			else if ($('#bravo').hasClass('oClass') == true && $('#epsilon').hasClass('oClass') == true && ($('#hotel').hasClass('oClass') == true)) {
+			else if ($('#bravo').hasClass(tester[i]) == true && $('#epsilon').hasClass(tester[i]) == true && ($('#hotel').hasClass(tester[i]) == true)) {
 				console.log("Column 2 wins");
 			}
-			else if ($('#charlie').hasClass('oClass') == true && $('#foxtrot').hasClass('oClass') == true && ($('#indigo').hasClass('oClass') == true)) {
+			else if ($('#charlie').hasClass(tester[i]) == true && $('#foxtrot').hasClass(tester[i]) == true && ($('#indigo').hasClass(tester[i]) == true)) {
 				console.log("Column 2 wins");
 			}
-			else if ($('#alpha').hasClass('oClass') == true && $('#epsilon').hasClass('oClass') == true && ($('#indigo').hasClass('oClass') == true)) {
+			else if ($('#alpha').hasClass(tester[i]) == true && $('#epsilon').hasClass(tester[i]) == true && ($('#indigo').hasClass(tester[i]) == true)) {
 				console.log("Diagonal 1 wins");
 			}
-			else if ($('#charlie').hasClass('oClass') == true && $('#epsilon').hasClass('oClass') == true && ($('#golf').hasClass('oClass') == true)) {
+			else if ($('#charlie').hasClass(tester[i]) == true && $('#epsilon').hasClass(tester[i]) == true && ($('#golf').hasClass(tester[i]) == true)) {
 				console.log("Diagonal 2 wins");
 			}
-
+		}
 	}
-
-	}
-	
-
 });
 

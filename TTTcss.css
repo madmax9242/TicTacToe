@@ -10,10 +10,10 @@
 	border-top:1px solid black;
 	border-bottom:1px solid black;
 }
-.blankSpace  {
+/*.blankSpace  {
  	color: white;
  	background-color: white;
-}
+}*/
 
 .winCounter  {
 	height: 20%;
@@ -28,3 +28,4 @@ td  {
 	min-height: 100px;
 	text-align: center;
 }
+

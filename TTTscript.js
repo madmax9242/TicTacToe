@@ -36,33 +36,85 @@ $(document).ready(function() {
 
 	function checkWinner()  {
 		var tester = ['oClass','xClass'];
+		var victoryConfirm = 0
 
 		for (var i = 0; i < tester.length; i++) {
 			if ($('#alpha').hasClass(tester[i]) == true && $('#bravo').hasClass(tester[i]) == true && ($('#charlie').hasClass(tester[i]) == true))  {
-				console.log("Row 1 wins");
+				if (tester[i] == 'oClass')  {
+					alert("Player 2 wins");
+					location.reload();
+				}
+				else {
+					alert("Player 1 wins");
+					location.reload();
+				}
+				// victoryConfirm = 1
 			}
 			else if ($('#delta').hasClass(tester[i]) == true && $('#epsilon').hasClass(tester[i]) == true && ($('#foxtrot').hasClass(tester[i]) == true)) {
-				console.log("Row 2 wins")
+				if (tester[i] == 'oClass')  {
+					alert("Player 2 wins");
+				}
+				else {
+					alert("Player 1 wins");
+				}
 			}
 			else if ($('#golf').hasClass(tester[i]) == true && $('#hotel').hasClass(tester[i]) == true && ($('#indigo').hasClass(tester[i]) == true)) {
-				console.log("Row 3 wins")
+				if (tester[i] == 'oClass')  {
+					alert("Player 2 wins");
+				}
+				else {
+					alert("Player 1 wins");
+				}				
 			}
 			else if ($('#alpha').hasClass(tester[i]) == true && $('#delta').hasClass(tester[i]) == true && ($('#golf').hasClass(tester[i]) == true)) {
-				console.log("Column 1 wins");
+				if (tester[i] == 'oClass')  {
+					alert("Player 2 wins");
+				}
+				else {
+					alert("Player 1 wins");
+				}
 			}
 			else if ($('#bravo').hasClass(tester[i]) == true && $('#epsilon').hasClass(tester[i]) == true && ($('#hotel').hasClass(tester[i]) == true)) {
-				console.log("Column 2 wins");
+				if (tester[i] == 'oClass')  {
+					alert("Player 2 wins");
+				}
+				else {
+					alert("Player 1 wins");
+				}
 			}
 			else if ($('#charlie').hasClass(tester[i]) == true && $('#foxtrot').hasClass(tester[i]) == true && ($('#indigo').hasClass(tester[i]) == true)) {
-				console.log("Column 2 wins");
+				if (tester[i] == 'oClass')  {
+					alert("Player 2 wins");
+				}
+				else {
+					alert("Player 1 wins");
+				}
 			}
 			else if ($('#alpha').hasClass(tester[i]) == true && $('#epsilon').hasClass(tester[i]) == true && ($('#indigo').hasClass(tester[i]) == true)) {
-				console.log("Diagonal 1 wins");
+				if (tester[i] == 'oClass')  {
+					alert("Player 2 wins");
+				}
+				else {
+					alert("Player 1 wins");
+				}
 			}
 			else if ($('#charlie').hasClass(tester[i]) == true && $('#epsilon').hasClass(tester[i]) == true && ($('#golf').hasClass(tester[i]) == true)) {
-				console.log("Diagonal 2 wins");
+				if (tester[i] == 'oClass')  {
+					alert("Player 2 wins");
+				}
+				else {
+					alert("Player 1 wins");
+				}
 			}
+
+			// if (tester[i] == 'oClass' && victoryConfirm == 1)  {
+			// 	alert("Player 2 wins");
+			// }
+			// else if (tester[i] == 'xClass' && victoryConfirm == 1) {
+			// 	alert("Player 1 wins");
+			//}
 		}
 	}
 });
+//End of program
 

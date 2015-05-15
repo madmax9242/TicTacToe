@@ -1,7 +1,10 @@
 #gameBoard  {
  	margin: 0 auto;
  }
-
+ #resetButton  {
+	height: 200px;
+	margin-top: 100px;
+}
 .column  {
 	border-left:1px solid black;
 	border-right:1px solid black;
@@ -10,15 +13,33 @@
 	border-top:1px solid black;
 	border-bottom:1px solid black;
 }
+.selectionForm {
+	margin: 0 auto;
 
+
+}
 .winCounter  {
-	height: 20%;
+	height: 200px%;
 	text-align: center;
-	font-size: 2em;
+	font-size: 5em;
 	background-color: lightblue;
 }
-
-
+button  {
+	display: block;
+	margin: 0 auto;
+	font-size: 3em;
+	min-width: 300px;
+	min-height: 200px;
+}
+form  {
+	width: 50%;
+	border: 3px solid red;
+	margin: 0 auto;
+}
+h3  {
+	text-align: center;
+	font-style: underline;
+}
 td  {
 	min-width: 100px;
 	min-height: 100px;

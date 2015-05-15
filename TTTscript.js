@@ -3,13 +3,11 @@ var xIcon = '<i class="fa fa-times fa-5x"></i>';
 var oIcon = '<i class="fa fa-circle-o fa-5x"></i>';
 var p1wins = 0;
 var p2wins = 0;
-
+var turnCounter = 0;
 $(document).ready(function() {
-	localStorage.setItem("P1-wins", p1wins);
-	localStorage.setItem("P2-wins", p2wins);
-	var turnCounter = Math.random() < 0.5 ? 1 : 0;
+	//var turnCounter = Math.random() < 0.5 ? 1 : 0;
 	//Chooses the order of play. If the random number is less than .5, then turnCounter starts at 1.  If random is more, tC starts at 0
-	
+	//displayTurnOrder();
 	//Refreshes the page
 	$('#resetBoard').click(function(event)  {
 		clearBoard();
@@ -44,12 +42,10 @@ $(document).ready(function() {
 		}
 	})
 
-
 	$('td').click(function(event)  {
-
 		turnCounter++;
 		//Uses modulus to test whether  the remainder is 1 or 0.  Easy way to switch turns back and forth
-		if (turnCounter % 2 === 0) {
+		if (turnCounter % 2 === 1) {
 			if ($(this).html() == xIcon || $(this).html() == oIcon) {
 				//Pops an alert if players try to overwrite each other's moves.  Needs to be first so the second condition does not get evaluated
 				alert("Nice try, cheater.");
@@ -63,7 +59,7 @@ $(document).ready(function() {
 			}
 		}
 
-		else if (turnCounter % 2 === 1) {
+		else if (turnCounter % 2 === 0) {
 			if ($(this).html() == xIcon || $(this).html() == oIcon) {
 
 				alert("Nice try, cheater.");
@@ -132,7 +128,21 @@ $(document).ready(function() {
 		$('td').removeClass('xClass');
 		$('td').removeClass('oClass');
 		$('td').html('<div></div>');
+		turnCounter = 0;
+		//displayTurnOrder(turnCounter);
 	} 
+
+	// function displayTurnOrder(turnCounter)  {
+	// 	turnCounter = Math.random() < 0.5 ? 1 : 0;
+	// 	if (turnCounter == 1)  {
+	// 		alert("Player 2 goes first");
+	// 	} 
+	// 	else if (turnCounter == 0)  {
+	// 		alert("Player 1 goes first");
+	// 	}
+	// 	console.log(turnCounter);
+	// 	return turnCounter;
+	// }
 });
 
 

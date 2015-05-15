@@ -17,22 +17,22 @@
 	<hr />
 	<table id="gameBoard">
 		<tr class="pure-g">
-			<td id="alpha"></td>
-			<td id="bravo" class="column"></td>
-			<td id="charlie"></td>
+			<td id="alpha" class="square"></td>
+			<td id="bravo" class="column square"></td>
+			<td id="charlie" class="square"></td>
 
 		</tr>
 
 		<tr class="pure-g">
-			<td id="delta" class="row"></td>
-			<td id="epsilon" class="row column"></td>
-			<td id="foxtrot" class="row"></td>
+			<td id="delta" class="row square"></td>
+			<td id="epsilon" class="row column square"></td>
+			<td id="foxtrot" class="row square"></td>
 		</tr>
 
 		<tr class="pure-g">
-			<td id="golf"></td>
-			<td id="hotel" class="column"></td>
-			<td id="indigo"></td>
+			<td id="golf" class="square"></td>
+			<td id="hotel" class="column square"></td>
+			<td id="indigo" class="square"></td>
 		</tr>
 
 		
@@ -40,15 +40,33 @@
 	</table>
 
 	<footer class="pure-g">
-		<div class="pure-u-1-3"><p></p></div>
-		<div class="pure-u-1-3 winCounter"><p class="winCounter">Win Counter</p></div>
-		<div class="pure-u-1-3"><p></p></div>
+		<div class="pure-u-1-3 selectorForm">
+			<h3>Choose your piece, player 1.</h3>
+			<form class="selectorForm">
+				<input type="radio" name="playerOne" class="xIcon">X<br>
+				<input type="radio" name="playerOne" class="beerIcon">Beer Mug<br>
+				<input type="radio" name="playerOne" class="bombIcon">Bomb<br>
+				<input type="radio" name="playerOne" class="spyIcon">Spy<br>
+				<input type="radio" name="playerOne" class="musicIcon">Music Note
+			</form>
+		</div>
+		<div class="pure-u-1-3 winCounter"><p id="winCounterText">Score</p><br></div>
+		<div class="pure-u-1-3 selectorForm">
+			<h3>Choose your piece, player 2.</h3>
+			<form class="selectorForm">
+				<input type="radio" name="playerTwo" class="oIcon">O<br>
+				<input type="radio" name="playerTwo" class="martiniIcon">Martini Glass<br>
+				<input type="radio" name="playerTwo" class="pawIcon">Paw<br>
+				<input type="radio" name="playerTwo" class="rocketIcon">Rocket<br>
+				<input type="radio" name="playerTwo" class="gamepadIcon">Game Controller
+			</form>
+		</div>
 	</footer>
 
 	<div id="resetButton" class="pure-g">
+		<div class="pure-u-1-3"><button id="resetBoard">New Game</button></div>
 		<div class="pure-u-1-3"></div>
-		<div class="pure-u-1-3"><button name="reset">Reset</button></div>
-		<div class="pure-u-1-3"></div>
+		<div class="pure-u-1-3"><button id="resetScore">Erase Score</button></div>
 	</div>
 
 

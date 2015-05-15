@@ -1,9 +1,26 @@
 var xIcon = '<i class="fa fa-times fa-5x"></i>';
 var oIcon = '<i class="fa fa-circle-o fa-5x"></i>';
+//beer = '<i class="fa fa-beer"></i>';
+//martini glass = '<i class="fa fa-glass"></i>'
+//eye = '<i class="fa fa-eye"></i>'
+//bomb = '<i class="fa fa-bomb"></i>'
+//paw = '<i class="fa fa-paw"></i>'
+//spy = '<i class="fa fa-user-secret"></i>'
+//rocket = '<i class="fa fa-rocket"></i>'
+//music = '<i class="fa fa-music"></i>'
+//gamepad = '<i class="fa fa-gamepad"></i>'
+
+
 
 $(document).ready(function() {
 	var turnCounter = Math.random() < 0.5 ? 1 : 0;
-	//Chooses the order of play.  If it's a 1, X goes first.  If its a 0, O goes first
+	//Chooses the order of play. If the random number is less than .5, then turnCounter starts at 1.  If random is more, tC starts at 0
+	
+	$('button').click(function(event)  {
+		location.reload();
+	})
+
+
 	$('td').click(function(event)  {
 		console.log(turnCounter);
 		turnCounter++;
@@ -34,23 +51,6 @@ $(document).ready(function() {
 			}
 		}
 	})
-
-	function chooseOrderofPlay()  {
-		var random = Math.random();
-		var turnCounter = random < 0.5 ? 1 : 0;
-		console.log(random)
-		console.log(turnCounter);
-		return turnCounter;
-		// var random = Math.random();
-		// console.log(random);
-		// if (random < 0.5) {
-		// 	turnCounter = 1;
-		// 	return turnCounter;
-		// }
-		// return turnCounter;
-		//}
-
-	}
 
 	function checkWinner()  {
 		var tester = ['oClass','xClass'];

@@ -1,7 +1,10 @@
 #gameBoard  {
  	margin: 0 auto;
  }
-
+ #resetButton  {
+	height: 200px;
+	margin-top: 100px;
+}
 .column  {
 	border-left:1px solid black;
 	border-right:1px solid black;
@@ -10,18 +13,21 @@
 	border-top:1px solid black;
 	border-bottom:1px solid black;
 }
-
 .winCounter  {
-	height: 20%;
+	height: 200px%;
 	text-align: center;
 	font-size: 2em;
 	background-color: lightblue;
 }
-
-
 td  {
 	min-width: 100px;
 	min-height: 100px;
 	text-align: center;
 }
+button  {
+	display: block;
+	margin: 0 auto;
+}
+
+
 
